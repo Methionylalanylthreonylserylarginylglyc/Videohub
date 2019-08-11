@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Users{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+    <h1>Liste de users</h1>
+    {% for user in users %}
+        {{ user.firstName }}
+        {{ user.lastName }}
+        <br/>
+    {% endfor %}
+
+{% endblock %}
